@@ -48,6 +48,7 @@ app.get("/api/reservations", function(req, res) {
     return res.json(false);
   });
 
+<<<<<<< HEAD
 //Reservation logic -- define how many tables there are, 
 
 const tables = {
@@ -79,10 +80,24 @@ const tables = {
 
 }
 
+=======
+>>>>>>> ed6cbd4e5005c684158341c8bf3ca977c3dfdb0d
 
 // Listener
 // ===========================================================
 app.listen(PORT, function() {
     console.log(`App listening on PORT ${PORT}`);
   });
-  
+
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/reserve", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+app.get("/tables", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
+});
+

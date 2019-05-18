@@ -1,0 +1,36 @@
+h1 {
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 40px;  
+}
+
+.rsvpButton {
+    border-radius: 8px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color: blue;
+    align-items: center;
+display: inline-block;
+} 
+
+.homeButton {
+    border-radius: 8px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color:blue;
+    display: inline-block;
+} 
