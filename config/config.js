@@ -3,5 +3,6 @@ module.exports = {
     // dbUser: process.env.DB_USER,
     // dbPass: process.env.DB_PASSWORD,
     port: 5000,
+    dbport:8080,
     db: ""
 }
