@@ -4,6 +4,7 @@ require("dotenv").config();
 var config = require('./config/config');
 var fs = require("fs");
 var express = require("express");
+var $ = require("jquery");
 var path = require("path");
 var mysql = require("mysql");
 
@@ -47,6 +48,40 @@ app.get("/api/reservations", function(req, res) {
     return res.json(false);
   });
 
+<<<<<<< HEAD
+//Reservation logic -- define how many tables there are, 
+
+const tables = {
+    totalTables: 20,
+    availTables: 20,
+
+    reserve: function() {
+        if(availTables > 0) {
+            app.post("/api/reservations", function(req, res) {
+                // req.body hosts is equal to the JSON post sent from the user
+                // This works because of our body parsing middleware
+                var newres = req.body;
+              
+                console.log(newres);
+              
+                // We then add the json the user sent to the res array
+                reservations.push(newres);
+              
+                // We then display the JSON to the users
+                res.json(newres);
+              })
+              availTables --;
+        } else {
+            console.log("no tables available.")
+        }
+
+    }
+
+
+}
+
+=======
+>>>>>>> ed6cbd4e5005c684158341c8bf3ca977c3dfdb0d
 
 // Listener
 // ===========================================================
