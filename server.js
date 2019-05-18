@@ -32,7 +32,7 @@ app.get("/api/reservations", function(req, res) {
     return res.json(reservations);
   });
   
-  // Displays a single reservation, or returns false
+  // Displays a single reservation, or returns false -- right now, it searches by name, but the route should be the ID
   app.get("/api/reservations/:reservation", function(req, res) {
     var chosen = req.params.reservation;
   

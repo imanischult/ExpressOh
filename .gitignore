@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 log.txt
 
+#db Stuff
+db_scripts
+
 # Runtime data
 pids
 *.pid
