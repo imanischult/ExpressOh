@@ -16,6 +16,37 @@ var PORT = config.port;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//Reservation data. This is actually going to be in the database; i am including it here as an example of the data we'; be pulling.
+// =============================================================
+var reservations = [
+  {
+    id: "", //use this for the routeName
+    name: "",
+    time: "",
+    numPeople: 0,
+  },
+];
+
+// Displays all reservations
+app.get("/api/reservations", function(req, res) {
+    return res.json(reservations);
+  });
+  
+  // Displays a single reservation, or returns false -- right now, it searches by name, but the route should be the ID
+  app.get("/api/reservations/:reservation", function(req, res) {
+    var chosen = req.params.reservation;
+  
+    console.log(chosen);
+  
+    for (var i = 0; i < reservations.length; i++) {
+      if (chosen === reservations[i].name) {
+        return res.json(reservations[i]);
+      }
+    }
+  
+    return res.json(false);
+  });
+
 
 // Listener
 // ===========================================================
